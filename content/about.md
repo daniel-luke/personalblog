@@ -37,7 +37,7 @@ what_i_do:
     icon: "las la-dragon"
     description: "Be unwavering in standing up for what you believe is good. Hold on to your principles, speak your mind, insist on the truth, no matter the personal cost."
 ---
-Several years ago, I found myself in a predicament. My foundation *(as in my house, my job, my money)* was gone. As far as the term 'hitting rock bottom', I'd say that my situation came quite close to that.
+Several years ago, I found myself in a predicament. My foundation *(as in: my house, my job, my money)* was gone. As far as the term 'hitting rock bottom', I'd say that my situation came quite close to that.
 
 Since then, I've tried to find a more structured 'way of living', and when stumbling on Stoicism, I knew it would be valuable for me. As I'm a practical person, and the philosophy itself is practical too.
 
@@ -47,7 +47,7 @@ Since then, I've come a long way. I managed to adapt a practical set of rules to
 
 I've started this blog, **not** to promote Stoicism, **not** to shout my opinion from the rooftops or to monetize on the popularity Stoicism has gained through the years. But to share my personal experiences and by sharing them, hopefully inspire others to give thought about how they could be a better person, day by day.
 
-To finish this off, I'd like to leave you with one of the quotes from *Marcus Aurelius* in which I found solice.
+To finish this off, I'd like to leave you with a quote in which I found solice.
 
 > The more we value things outside our control, the less control we have. - Marcus Aurelius
 

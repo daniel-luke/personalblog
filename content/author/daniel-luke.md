@@ -1,18 +1,16 @@
 ---
 title: "Daniel Luke"
 image: "images/author/daniel.jpg"
-email: "abdulmonnafsomrat@gmail.com"
+email: "daniel@storiesofadev.com"
 date: 2021-02-02T10:20:19+06:00
 draft: false
 social:
-- icon: "la-facebook-f"
-  link: "https://facebook.com"
 - icon: "la-twitter"
-  link: "https://twitter.com"
-- icon: "la-linkedin-in"
-  link: "https://linkedin.com"
+  link: "https://twitter.com/_danielluke"
 ---
 
-Maecenas sit amet purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
+I'm Daniel Luke. I write about life and how I manage to navigate it. 
 
-Purus eget ipsum elementum venenatis. Aenean maximus urna magna elementum venenatis, quis rutrum mi semper non purus eget ipsum elementum venenatis.
+In my search for practical advice and philosophy, I found Stoisicm and with it, I found strenght. 
+
+I enjoy writing about my experience with it and below you'll find a collection of my articles.
