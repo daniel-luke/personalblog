@@ -1,5 +1,5 @@
 ######################## default configuration ####################
-baseURL = "https://demo.gethugothemes.com/bookworm-light/"
+baseURL = "https://www.danielluke.blog/"
 title = "Daniel Luke - Stoic Thoughts"
 theme = "bookworm-light"
 # post pagination
@@ -73,7 +73,7 @@ color_primary = "#B2CFCC"
 
 #################### default parameters ################################
 [params]
-logo = "images/newlogo.png"
+logo = "images/logo.png"
 logo_width = "200px"
 favicon = "images/favicon.png"
 # Meta data
@@ -86,7 +86,7 @@ search = true
 # main section
 mainSections = ["blog"]
 # copyright
-copyright = "&copy; 2022 - [DanielLuke.blog](#)"
+copyright = "&copy; 2022 - [DanielLuke.blog](/)"
 
 # Preloader
 [params.preloader]

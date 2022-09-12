@@ -50,3 +50,7 @@ I've started this blog, **not** to promote Stoicism, **not** to shout my opinion
 To finish this off, I'd like to leave you with one of the quotes from *Marcus Aurelius* in which I found solice.
 
 > The more we value things outside our control, the less control we have. - Marcus Aurelius
+
+All the best,
+<br>
+<img src="/assets/signature.png" width="150">
