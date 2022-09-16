@@ -14,12 +14,10 @@ jobs:
         with:
           submodules: true
           fetch-depth: 50
-      - name: Install Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "0.102.0"
       - name: Build Project
-        run: hugo --gc --minify
+        uses: jakejarvis/hugo-build-action@master
+        with:
+          args: --minify
       - name: Storing Artifacts
         uses: actions/upload-artifact@v2
         if: github.ref == 'refs/heads/main'
