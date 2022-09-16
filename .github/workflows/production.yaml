@@ -7,32 +7,32 @@ on:
       - "feature/github-ci"
 jobs:
   build:
-    name: Build Production
-    runs-on: ubuntu-18.04
+    name: Build
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
         with:
           submodules: true
           fetch-depth: 50
-      - name: Build Project
+      - name: Build Static Files
         uses: jakejarvis/hugo-build-action@master
         with:
           args: --minify
       - name: Storing Artifacts
         uses: actions/upload-artifact@v2
         with:
-          name: public
+          name: artifacts
           path: public/
           retention-days: 1
-  deploy:
-    name: Deploy Production
+  deployProd:
+    name: Deploy PROD
     needs: build
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
           - name: Download Artifacts
             uses: actions/download-artifact@v2
             with:
-              name: public
+              name: artifacts
               path: public/
           - name: Publish to Netlify
             uses: netlify/actions/cli@master
