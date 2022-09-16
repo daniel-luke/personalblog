@@ -1,4 +1,4 @@
-name: Release Pipeline
+name: Release
 on:
   push:
     tags:
@@ -25,7 +25,7 @@ jobs:
           path: public/
           retention-days: 1
   deployAcc:
-    name: Deploy PROD
+    name: Deploy ACC
     needs: build
     runs-on: ubuntu-22.04
     environment: Acceptance
