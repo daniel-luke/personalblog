@@ -1,4 +1,4 @@
-name: Production Pipeline
+name: Release Pipeline
 on:
   push:
     tags:
@@ -24,9 +24,27 @@ jobs:
           name: artifacts
           path: public/
           retention-days: 1
-  deployProd:
+  deployAcc:
     name: Deploy PROD
     needs: build
+    runs-on: ubuntu-22.04
+    environment: Acceptance
+    steps:
+          - name: Download Artifacts
+            uses: actions/download-artifact@v2
+            with:
+              name: artifacts
+              path: public/
+          - name: Publish to Acceptance
+            uses: netlify/actions/cli@master
+            with:
+              args: deploy -p --dir=public
+            env:
+              NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+              NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  deployProd:
+    name: Deploy PROD
+    needs: [build, deployAcc]
     runs-on: ubuntu-22.04
     environment: Production
     steps:
@@ -35,7 +53,7 @@ jobs:
             with:
               name: artifacts
               path: public/
-          - name: Publish to Netlify
+          - name: Publish to Production
             uses: netlify/actions/cli@master
             with:
               args: deploy -p --dir=public
