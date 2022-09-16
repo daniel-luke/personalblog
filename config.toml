@@ -101,10 +101,10 @@ access_token = "IGQVJYeUk4YWNIY1h4OWZANeS1wRHZARdjJ5QmdueXN2RFR6NF9iYUtfcGp1Nmpx
 
 # Subscription
 [params.subscription]
-enable = false
+enable = true
 # mailchimp subsciption
-mailchimp_form_action = "https://gmail.us4.list-manage.com/subscribe/post?u=463ee871f45d2d93748e77cad&amp;id=a0a2c6d074" # replace this url with yours
-mailchimp_form_name = "b_463ee871f45d2d93748e77cad_a0a2c6d074" # replace this code with yours
+mailchimp_form_action = "https://blog.us12.list-manage.com/subscribe/post?u=81ff463f281864a53d50df52f&amp;id=88f3c248d0&amp;f_id=00cebbe0f0" # replace this url with yours
+mailchimp_form_name = "b_81ff463f281864a53d50df52f_88f3c248d0" # replace this code with yours
 title = "Subscribe for our monthly newsletter."
 input_placeholder = "Enter your email"
 
