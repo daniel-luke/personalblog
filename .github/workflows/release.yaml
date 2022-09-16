@@ -1,0 +1,60 @@
+name: Release
+on:
+  push:
+    tags:
+      - "*"
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 50
+      - name: Build Static Files
+        uses: jakejarvis/hugo-build-action@master
+        with:
+          args: --minify
+      - name: Storing Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: artifacts
+          path: public/
+          retention-days: 1
+  deployAcc:
+    name: Deploy ACC
+    needs: build
+    runs-on: ubuntu-22.04
+    environment: Acceptance
+    steps:
+          - name: Download Artifacts
+            uses: actions/download-artifact@v2
+            with:
+              name: artifacts
+              path: public/
+          - name: Publish to Acceptance
+            uses: netlify/actions/cli@master
+            with:
+              args: deploy -p --dir=public
+            env:
+              NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+              NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  deployProd:
+    name: Deploy PROD
+    needs: [build, deployAcc]
+    runs-on: ubuntu-22.04
+    environment: Production
+    steps:
+          - name: Download Artifacts
+            uses: actions/download-artifact@v2
+            with:
+              name: artifacts
+              path: public/
+          - name: Publish to Production
+            uses: netlify/actions/cli@master
+            with:
+              args: deploy -p --dir=public
+            env:
+              NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+              NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
