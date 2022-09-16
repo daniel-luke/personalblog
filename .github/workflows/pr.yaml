@@ -1,0 +1,16 @@
+name: PR
+on:
+  pull_request:
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+          fetch-depth: 50
+      - name: Build Static Files
+        uses: jakejarvis/hugo-build-action@master
+        with:
+          args: --minify
