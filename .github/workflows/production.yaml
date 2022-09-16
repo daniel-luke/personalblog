@@ -20,7 +20,6 @@ jobs:
           args: --minify
       - name: Storing Artifacts
         uses: actions/upload-artifact@v2
-        if: github.ref == 'refs/heads/main'
         with:
           name: public
           path: public/
